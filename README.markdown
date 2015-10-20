@@ -1,22 +1,16 @@
-Simple JavaScript DOM Inspector v0.1.2
-======================================
+#DomInspector
 
-Highlights hovered elements with a 2px red outline, and then logs the element's full CSS selector path when clicked. It could also display the selected element's XPath, or do pretty much anything with it in the callback function.
+Based on [oldprojects/Simple-JavaScript-DOM-Inspector](https://github.com/oldprojects/Simple-JavaScript-DOM-Inspector) \(see `inspector.source.js`).
 
-The CSS selector path-building code tries to be as specific as possible, but can also build a more optimised CSS selector, stopping at the first parent with a specific ID.
+Be fault, it
 
-Optionally, it also checks to see whether any part of the CSS path matches multiple elements, or if any element has no ID or CSS class, and adds specific "nth-child" pseudo-selectors where needed for full CSS paths.
+- styles hovered elements,
+- logs the clicked element to the console,
+- cancels on Escape key,
 
-* Example optimised CSS path: `#content .left p img`
-* Example full CSS path: `html body #main #content .left p img`
-* Example full CSS path with nth-child: `html body #main #content .left p:nth-child(3) img:nth-child(1)`
+though it is fully configurable via initialisation `object` argument.
 
-Hit escape key to cancel the inspector.
+###Usage
 
-NB: XPath code removed as it didn't really work very well, need to write from scratch.
-
-Started putting in IE support, but won't work in IE just yet, check back next week for that (so far, tested in FF4, Chrome, Safari, Opera 11.)
-
-No warranty; probably won't break the internet. Improvements and linkbacks welcome!
-
-Joss
+    var options = {}; // See 'initialise' method for attributes.
+    var inspector = new DomInspector(options);
