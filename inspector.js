@@ -173,7 +173,6 @@ function DomInspector (options)
      * */
     var onKeyDown = function (e)
     {
-        console.log(e);
         if (e.which === escapeKeyCode) {
             options.stopOnEscape && stopInspecting();
         }
@@ -235,7 +234,10 @@ function DomInspector (options)
             $document.off('keyDown', onKeyDown);
         }
 
-        last.style.outline = 'none';
+        if (last && last.style) {
+            last.style.outline = 'none';
+            last.style.cursor = 'auto';
+        }
 
         options.onStop && options.onStop();
     };
