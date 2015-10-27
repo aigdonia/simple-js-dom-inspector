@@ -142,7 +142,7 @@ function DomInspector (options)
      * Click handler.
      *
      * @param Event event   jQuery click event object (https://api.jquery.com/click/).
-     * @return boolean
+     * @return void
      *
      * */
     var onClick = function (e)
@@ -157,11 +157,9 @@ function DomInspector (options)
             event: e
         };
 
-        options.onClick && options.onClick(clickData);
+        var stoppable = options.onClick && options.onClick(clickData) !== false;
 
-        options.stopOnClick && stopInspecting();
-
-        return false;
+        options.stopOnClick && stoppable && stopInspecting();
     };
 
     /**
