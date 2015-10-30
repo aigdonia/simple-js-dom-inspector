@@ -151,9 +151,12 @@ function DomInspector (options)
 
         path = cssPath(e.target);
 
+        var $element = $(element);
+
         var clickData = {
+            $element: $element,
+            url: $element && $element.length && $element.get(0).baseURI,
             path: path,
-            $element: $(element),
             event: e
         };
 
