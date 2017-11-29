@@ -4,9 +4,9 @@ Based on [oldprojects/Simple-JavaScript-DOM-Inspector](https://github.com/oldpro
 
 By default, it…
 
-• styles hovered elements,
-• logs the clicked element to the console,
-• cancels on Escape key,
+- styles hovered elements
+- logs the clicked element to the console
+- cancels on Escape key
 
 …though it's fully configurable via its `options` parameter.
 
