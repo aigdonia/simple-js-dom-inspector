@@ -1,16 +1,16 @@
-#DomInspector
+# DomInspector
 
 Based on [oldprojects/Simple-JavaScript-DOM-Inspector](https://github.com/oldprojects/Simple-JavaScript-DOM-Inspector) \(see `inspector.source.js`).
 
-Be fault, it
+By default, it…
 
-- styles hovered elements,
-- logs the clicked element to the console,
-- cancels on Escape key,
+• styles hovered elements,
+• logs the clicked element to the console,
+• cancels on Escape key,
 
-though it is fully configurable via initialisation `object` argument.
+…though it's fully configurable via its `options` parameter.
 
-###Usage
+### Usage
 
     var options = {}; // See 'initialise' method for attributes.
     var inspector = new DomInspector(options);
